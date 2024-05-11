@@ -22,7 +22,7 @@
         var n2 = Number.parseInt(window.prompt('Digite outro número: '))
         var n3 = Number(window.prompt('Digite outro número: '))
         var s = n1 + n2 + n3
-        window.alert('A soma dos valores é '+ (String(n1)))
+        window.alert('A soma dos valores é '+ (s.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})))
     </script>
 </body>
 </html>
