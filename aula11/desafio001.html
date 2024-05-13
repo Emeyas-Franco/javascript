@@ -34,13 +34,15 @@
 </head>
 <body>
     <h1>Cadastre-se</h1>
-     <p><label for="inome">Nome: <input type="text" name="inome" id="inome" size="70" placeholder="Digite seu nome:"></label></p>
-    <p>
-         <label for="nascimento">Data de Nascimento: <input type="date" name="nascimento" id="nascimento"></label>
-        <label for="ipais">Local de Nascimento: <input type="text" name="ipais" id="ipais"></label>
-    </p>
-    <input type="button" value="Cadastrar" onclick="calcular()">
-    <input type="reset" value="Limpar">
+     <form action="">
+         <p><label for="inome">Nome: <input type="text" name="inome" id="inome" size="70" placeholder="Digite seu nome:"></label></p>
+             <p>
+             <label for="nascimento">Data de Nascimento: <input type="date" name="nascimento" id="nascimento"></label>
+            <label for="ipais">Local de Nascimento: <input type="text" name="ipais" id="ipais"></label>
+             </p>
+             <input type="button" value="Cadastrar" onclick="calcular()">
+             <input type="reset" value="Limpar">
+     </form>
     <div id="res"></div>
     <script>
         function calcular() {
