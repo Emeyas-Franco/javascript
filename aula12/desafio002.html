@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSE</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            font: normal 13pt arial;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        div#res{
+            background-color: aliceblue;
+            margin: 15px auto;
+            padding: 10px;
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: justify;
+            text-indent: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastre-se</h1>
+    <form action="#" method="post">
+        <p><label for="inome">Nome: <input type="text" name="inome" id="inome" placeholder="Digite seu nome aqui" size="75" required></label></p>
+        <p><label for="idade">Idade: <input type="number" name="idade" id="idade" placeholder="digite sua idade" required></label></p>
+        <input type="button" value="Enviar" onclick="calcular()">
+        <input type="reset" value="Limpar">
+    </form>
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            let nome = window.document.getElementById('inome')
+            let idade = window.document.getElementById('idade')
+            let res = window.document.getElementById('res')
+            res.innerHTML = `<p> Olá <strong>${nome.value}</strong>, seja bem vindo ao site do <strong>TSE</strong>.`
+            if (idade.value < 16) {
+                res.innerHTML += `<p>Como você tem ${idade.value} anos, você <strong>não pode votar</strong>.`
+            } else if (idade.value <= 17 || idade.value >= 65) {
+                res.innerHTML += `<p>Como você tem ${idade.value} anos, seu voto é <strong>facultativo</strong>.`
+            } else {
+                res.innerHTML += `</p><p>Como você tem ${idade.value} anos, seu voto é <strong>obrigatório</strong>.`
+            }
+            
+        }
+    
+    </script>
+</body>
+</html>
